@@ -128,14 +128,23 @@ cin.tie(NULL);
 // int a,b;
 // cin >> a >> b;
 //cout << a + b << endl;
-int arr[] = {5, 2, 7,4 ,3,6,1};
+// int arr[] = {5, 2, 7,4 ,3,6,1};
+int arr[] = {1,2,3,4,6,7}; // 5
+// sum of the elements from 1 to n is given by n*(n+1)/2
+int n  = 7;
 int size = sizeof(arr) /sizeof(arr[0]);
 // traversal(arr, size);
 // cout << sum_arr(arr, size);
 // search(arr,size, 7);
 // reverse(arr, size);
-rev_rec(arr, 0, size -1);
-for(int i : arr)
-cout << i << " ";
+// rev_rec(arr, 0, size -1);
+// problem-1 Statement : find the missing number from the given sequence 1 to n.
+int sum =0;
+for (int i : arr) {
+    sum += i;
+}
+int ans = n* (n+1)/2 -sum;
+// for(int i : arr)
+cout << ans << " ";
 return 0;
 }
